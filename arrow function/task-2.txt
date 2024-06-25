@@ -1,0 +1,91 @@
+Q2. Do the below programs in Arrow Function.
+
+a.Print odd numbers in an array
+
+var oddsarrow = a2 => {
+    for (var i = 0; i < a2.length; i++) {
+        var b3 = a2[i];
+        if (b3 % 2 !== 0) {
+            console.log(b3);
+        }
+    }
+};
+oddsarrow([1, 2, 3, 4, 5,6,7,8,9,10,11]);
+
+_________________________________________________________________________________________
+
+b.Convert all the strings to title caps in a string array
+
+var arrowcaps = a2 => {
+    for (var i = 0; i < a2.length; i++) {
+        var b2 = a2[i];
+        var result = b2[0].toUpperCase();
+        for (var j = 1; j < b2.length; j++) {
+            result += b2[j].toLowerCase();
+        }
+        a2[i] = result;
+    }
+    return a2;
+};
+console.log(arrowcaps(["apple", "banana", "strawberry"]));
+
+_________________________________________________________________________________________
+
+
+c.Sum of all numbers in an array
+
+var sumArray = a => {
+    var sum = 0;
+    for (var i = 0; i < a.length; i++) {
+        sum += a[i];
+    }
+    return sum;
+};
+console.log(sumArray([1, 2, 3, 4, 5,6,7]));
+
+_________________________________________________________________________________________
+
+
+d.Return all the prime numbers in an array
+var pm = arr => {
+    var primes = [];
+    for (var i = 0; i < arr.length; i++)
+    {
+        var num = arr[i];
+        var isPrime = true;
+        for (var j = 2; j < num; j++)
+        {
+            if (num % j == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime && num > 1)
+        {
+            primes.push(num);
+        }
+    }
+    return primes;
+}
+console.log(pm([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]))
+
+_________________________________________________________________________________________
+
+
+e.Return all the palindrome numbers in an array
+
+var a = arr => {
+    const b = str => str === str.split('').reverse().join('');
+    var d = [];
+    for (var c of arr) {
+        if (b(c.toString())) {
+            d.push(c);
+        }
+    }
+    return d;
+};
+console.log(a(["Arrow","hello","madam", "john","wow","bike", "peep", "level", 232, 71317]));
+
+_________________________________________________________________________________________
+
